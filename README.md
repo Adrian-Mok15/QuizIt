@@ -1,7 +1,7 @@
 Original App Design Project - README Template
 ===
 
-# APP_NAME_HERE
+# QuizIt
 
 ## Table of Contents
 1. [Overview](#Overview)
@@ -11,11 +11,12 @@ Original App Design Project - README Template
 
 ## Overview
 ### Description
-[Description of your app]
+A quiz app that asks you multiple-choice questions related to computer science interview questions. Algorithms and data structures based. (also include a section that displays different languages of code and asks the user to pick out which language it is) (section with bugs in code with error messages that user needs to fix) - All should be multiple-choice, otherwise it would be too difficult.
+
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
-- **Category:**
+- **Category: Education/Entertainment**
 - **Mobile:**
 - **Story:**
 - **Market:**
@@ -28,13 +29,20 @@ Original App Design Project - README Template
 
 **Required Must-have Stories**
 
-* [fill in your required user stories here]
-* ...
+
+* Login/sign up page
+* Logout button
+* Bottom navigation view - home page with the different quiz types, should hold point values to make the game fun (probably at the top right), profile page with settings, 
+* Database for the questions. Either need to get an API, or write the questions ourselves.
+* QuizActivity.xml - Should have a question at the top, and 4 buttons representing each multiple choice. Should probably also have an exit button. Point counter gained per quiz. We could probably follow the same pt system as some online quiz thing. 
+* Home.xml - buttons to represent the different quiz types. Username at the top left. Points at the top right. 
+* Profile.xml - profile page with stats of how many they got right/wrong. If we decide to categorize the questions, that should be shown here as well. Logout button. 
 
 **Optional Nice-to-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* [fill in your optional user stories here]
+* Attractive color scheme
+* Page with questions the user recently got wrong.Should clear up once user completes that question correctly ( we could also just make this a separate quiz)  (maybe one more item for the bottom nav)
 
 ### 2. Screen Archetypes
 
@@ -75,6 +83,6 @@ Original App Design Project - README Template
 ### Models
 [Add table of models]
 ### Networking
-- [Add list of network requests by screen ]
+- [https://github.com/realVEct0r/leetcode-api]
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
