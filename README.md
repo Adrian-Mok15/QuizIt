@@ -46,28 +46,43 @@ A quiz app that asks you multiple-choice questions related to computer science i
 
 ### 2. Screen Archetypes
 
-* [list first screen here]
-   * [list associated required story here]
+* Login/Signup
+   * Login and sign up buttons.
    * ...
-* [list second screen here]
-   * [list associated required story here]
+* List of Quizzes 
+   * list of all the quizzes 
+   * ...
+* Profile
+   * Stats: point values, percentages, performance in categories.
+   * ...
+* Settings
+   * Logout
+   * Option to reset profile
+* Individual quiz
+   * The actual quiz with mc
+   * ...
+* Quiz stats page
+   * List of questions and answers as well as the breakdown 
    * ...
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* [fill out your first tab]
+* Bottom view nav - Profile, quiz list, and previous quizzes (quiz history)
 * [fill out your second tab]
 * [fill out your third tab]
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
+* Profle to settings page
+   * settings button 
+   * ...
+* Quiz list page to the start of an actual quiz.
    * [list screen navigation here]
    * ...
-* [list second screen here]
-   * [list screen navigation here]
+* Quiz list page to a specific quiz's stats.
+   * button next to the quiz that brings user to the stats page of the quiz instead of starting the actual quiz. 
    * ...
 
 ## Wireframes
