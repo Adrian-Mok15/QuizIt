@@ -89,7 +89,7 @@ A quiz app that asks you multiple-choice questions related to computer science i
 [Add picture of your hand sketched wireframes in this section]
 <img src="Pictures/Screenshot.png" width=600>
 
-### ![https://www.figma.com/file/GIUegFo2r2VBD3I5MJM01V/login?node-id=0%3A1](https://www.figma.com/file/GIUegFo2r2VBD3I5MJM01V/login?node-id=0%3A1) Login
+### [https://www.figma.com/file/GIUegFo2r2VBD3I5MJM01V/login?node-id=0%3A1](https://www.figma.com/file/GIUegFo2r2VBD3I5MJM01V/login?node-id=0%3A1) Login
 
 ### [BONUS] Interactive Prototype
 
