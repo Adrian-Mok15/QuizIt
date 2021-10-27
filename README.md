@@ -96,9 +96,24 @@ A quiz app that asks you multiple-choice questions related to computer science i
 <img src="prototype.gif">
 
 ## Schema 
-[This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+  Quiz
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | timesTaken    | Number   | number of times a quiz has been taken|
+   | averageScore  | Number   | Average score |
+   | content       | json object  | json object from the api that holds all data related to the quiz |
+   
+  User
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | points        | Number   | number of points a user has|
+   | quizzes       | String   | list of past 10 quizzes a user has taken and their score corresponding |
+   | username        | string     | username|
+   | password       | String   | password |
+   | email | String   | email |
+   | quizCount   | Number   | number of quizzes taken |
+
 ### Networking
 - [https://github.com/realVEct0r/leetcode-api]
 - [Create basic snippets for each Parse network request]
