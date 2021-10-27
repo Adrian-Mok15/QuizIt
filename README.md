@@ -93,6 +93,7 @@ A quiz app that asks you multiple-choice questions related to computer science i
 
 ### [BONUS]
 ### [Interactive Prototype](https://www.figma.com/proto/4rbI4pwN6ke5u0SD7onNtG/QuizApp?node-id=2%3A2&scaling=scale-down&page-id=0%3A1&starting-point-node-id=2%3A2)
+<img src="prototype.gif">
 
 ## Schema 
 [This section will be completed in Unit 9]
