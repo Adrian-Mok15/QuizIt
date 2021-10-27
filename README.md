@@ -87,11 +87,12 @@ A quiz app that asks you multiple-choice questions related to computer science i
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="Pictures/Screenshot.png" width=600>
+<img src="Pictures/Wireframe.png" width=600>
 
-### [https://www.figma.com/file/GIUegFo2r2VBD3I5MJM01V/login?node-id=0%3A1](https://www.figma.com/file/GIUegFo2r2VBD3I5MJM01V/login?node-id=0%3A1) Login
+### [Wireframe](https://www.figma.com/file/4rbI4pwN6ke5u0SD7onNtG/QuizApp?node-id=0%3A1)
 
-### [BONUS] Interactive Prototype
+### [BONUS]
+### [Interactive Prototype](https://www.figma.com/proto/4rbI4pwN6ke5u0SD7onNtG/QuizApp?node-id=2%3A2&scaling=scale-down&page-id=0%3A1&starting-point-node-id=2%3A2)
 
 ## Schema 
 [This section will be completed in Unit 9]
