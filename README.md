@@ -87,7 +87,7 @@ A quiz app that asks you multiple-choice questions related to computer science i
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="https://www.figma.com/file/GIUegFo2r2VBD3I5MJM01V/login?node-id=0%3A1L" width=600>
 
 ### ![](https://www.figma.com/file/GIUegFo2r2VBD3I5MJM01V/login?node-id=0%3A1) Digital Wireframes & Mockups
 
