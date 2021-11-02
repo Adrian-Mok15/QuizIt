@@ -125,12 +125,11 @@ query.findInBackground(new FindCallback<Post>(){
           return;
           }
      }
-     for(Quiz quiz : quizzes){
-          adapter.clear();
-          adapter.addAll(quizzes);
-          allPosts.addAll(quizzes);
-          swipeRefreshLayout.setRefreshing(false);
-          }
+     for(Quiz quiz : quizzes){}
+      adapter.clear()
+      adapter.addAll(quizzes);
+      allPosts.addAll(quizzes);
+      swipeRefreshLayout.setRefreshing(false);
       }
 ```
 - [https://github.com/realVEct0r/leetcode-api]
