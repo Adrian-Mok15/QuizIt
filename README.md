@@ -116,22 +116,21 @@ A quiz app that asks you multiple-choice questions related to computer science i
 
 ### Networking
 - Home Feed Screen
-  - (Read/GET) Query all quizzes where user hasn't started ```
+  - (Read/GET) Query all quizzes that user hasn't started ```
          ParseQuery<Quiz> query = ParseQuery.getQuery(Quiz.class);
          query.findInBackground(new FindCallback<Post>() {
          @Override
          if (e != null){
           Log.e(TAG, "issue with getting quizzes", e);
           return;
-                }
+           }
          }
          for(Quiz quiz : quizzes){
-          Log.i(TAG, "Post " + post.getDescription() + ", username: " + post.getUser().getUsername());
          }
          // TODO: Do something with posts...
          adapter.clear();
-         adapter.addAll(posts);
-         allPosts.addAll(posts);
+         adapter.addAll(quizzes);
+         allPosts.addAll(quizzes);
          swipeRefreshLayout.setRefreshing(false);
           }
          }
