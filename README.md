@@ -135,5 +135,7 @@ A quiz app that asks you multiple-choice questions related to computer science i
       }
      ```
 - [https://github.com/realVEct0r/leetcode-api]
-- [Create basic snippets for each Parse network request]
+- Profile Screen
+    - (Read/Get) Highest grade obtained.
+    - (Read/Get) Lowest grade obtained.
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
