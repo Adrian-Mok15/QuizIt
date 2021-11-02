@@ -123,8 +123,8 @@ A quiz app that asks you multiple-choice questions related to computer science i
          query.findObjectsInBackground { (Quiz: [PFObject]?, error: Error?) in
             if let error = error { 
                print(error.localizedDescription)
-            } else if let posts = posts {
-               print("Successfully retrieved \(posts.count) posts.")
+            } else if let quiz = quiz {
+               print("Successfully retrieved \(quiz.count) posts.")
            // TODO: Do something with posts...
             }
          }
