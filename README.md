@@ -116,8 +116,7 @@ A quiz app that asks you multiple-choice questions related to computer science i
 
 ### Networking
 - Home Feed Screen
-  - (Read/GET) Query all quizzes where user hasn't started
-         ```
+  - (Read/GET) Query all quizzes where user hasn't started ```
          ParseQuery<Quiz> query = ParseQuery.getQuery(Quiz.class);
          query.findInBackground(new FindCallback<Post>() {
          @Override
