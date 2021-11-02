@@ -135,8 +135,7 @@ A quiz app that asks you multiple-choice questions related to computer science i
       }
      ```
 - [https://github.com/realVEct0r/leetcode-api]
-- Profile Screen
-    - (Read/Get) Get username.
+- Previous Quizzes Screen
     - (Read/Get) Querry the title of all the quizzes the user has finished.
     ```
       ParseQuery<Quiz> query = ParseQuery.getQuery<Quiz.class>);
@@ -156,6 +155,5 @@ A quiz app that asks you multiple-choice questions related to computer science i
       }
      ``` 
                 
-    - (Read/Get) Obtained the average score of every quiz the user has finished.
-    - (Read/Get) Get user's rank.
+    - (Read/Get) Obtained the score the user got in his first try, second try, etc.
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
