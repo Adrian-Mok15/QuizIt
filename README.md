@@ -115,6 +115,19 @@ A quiz app that asks you multiple-choice questions related to computer science i
    | quizCount   | Number   | number of quizzes taken |
 
 ### Networking
+- Home Feed Screen
+- let query = PFQuery(className:"Quizzes")
+query.whereKey("author", equalTo: currentUser)
+query.order(byDescending: "createdAt")
+query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
+   if let error = error { 
+      print(error.localizedDescription)
+   } else if let posts = posts {
+      print("Successfully retrieved \(posts.count) posts.")
+  // TODO: Do something with posts...
+   }
+}
+
 - [https://github.com/realVEct0r/leetcode-api]
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
