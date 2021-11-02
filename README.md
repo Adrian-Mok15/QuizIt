@@ -164,4 +164,7 @@ A quiz app that asks you multiple-choice questions related to computer science i
      - (Update/Put) Update user profile picture.
      - (Update/Put) Update user email.
      - (Update/Put) Update user password.
+  - Result Screen
+     - (Read/Get) Number of questions the user got right.
+     - (Read/Get) Number of questions the user got wrong.
 - [https://github.com/realVEct0r/leetcode-api]
