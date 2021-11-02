@@ -160,4 +160,9 @@ A quiz app that asks you multiple-choice questions related to computer science i
     - (Read/Get) User's rank.
     - (Read/Get) User's highest grade obtained in a quiz.
     - (Read/Get) User's lowest grade obtained in a quiz.
+    - (Read/Get) User's profile picture.
+    -Settings Screen
+       - (Update/Put) Update user profile picture.
+       - (Update/Put) Update user email.
+       - (Update/Put) Update user password.
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
