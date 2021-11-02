@@ -126,11 +126,11 @@ query.findInBackground(new FindCallback<Post>(){
           }
      }
      for(Quiz quiz : quizzes){}
-      adapter.clear()
-      adapter.addAll(quizzes);
-      allPosts.addAll(quizzes);
-      swipeRefreshLayout.setRefreshing(false);
-      }
+     adapter.clear()
+     adapter.addAll(quizzes);
+     allPosts.addAll(quizzes);
+     swipeRefreshLayout.setRefreshing(false);
+}
 ```
 - [https://github.com/realVEct0r/leetcode-api]
 - [Create basic snippets for each Parse network request]
