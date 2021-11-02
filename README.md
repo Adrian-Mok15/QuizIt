@@ -134,7 +134,6 @@ A quiz app that asks you multiple-choice questions related to computer science i
           swipeRefreshLayout.setRefreshing(false);
       }
      ```
-- [https://github.com/realVEct0r/leetcode-api]
 - Previous Quizzes Screen
     - (Read/Get) Querry the title of all the quizzes the user has finished.
     ```
@@ -165,4 +164,4 @@ A quiz app that asks you multiple-choice questions related to computer science i
      - (Update/Put) Update user profile picture.
      - (Update/Put) Update user email.
      - (Update/Put) Update user password.
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+- [https://github.com/realVEct0r/leetcode-api]
