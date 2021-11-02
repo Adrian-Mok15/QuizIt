@@ -154,6 +154,11 @@ A quiz app that asks you multiple-choice questions related to computer science i
            swipeRefreshLayout.setRefreshing(false);
       }
      ``` 
+ - Profile Home Screen
+    - (Read/Get) Current username.
+    - (Read/Get) User's rank.
+    - (Read/Get) User's highest grade obtained in a quiz.
+    - (Read/Get) User's lowest grade obtained in a quiz.
                 
     - (Read/Get) Obtained the score the user got in his first try, second try, etc.
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
