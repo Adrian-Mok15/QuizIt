@@ -136,6 +136,26 @@ A quiz app that asks you multiple-choice questions related to computer science i
      ```
 - [https://github.com/realVEct0r/leetcode-api]
 - Profile Screen
-    - (Read/Get) Highest grade obtained.
-    - (Read/Get) Lowest grade obtained.
+    - (Read/Get) Get username.
+    - (Read/Get) Querry the title of all the quizzes the user has finished.
+    ```
+      ParseQuery<Quiz> query = ParseQuery.getQuery<Quiz.class>);
+      query.findInBacckground(new FindCallback<Post>(){
+           @Overrride
+           if(e != null){
+                Log.e(TAG, "issue with getting quizzes", e);
+                return;
+           }
+           for(Quiz quiz: quizzes){
+                Log.i(TAG, "Quiz: " + quiz.getName());
+           }
+           adapter.clear();
+           adapter.addAll(quizzes);
+           allPosts.addAll(quizzes);
+           swipeRefreshLayout.setRefreshing(false);
+      }
+     ``` 
+                
+    - (Read/Get) Obtained the average score of every quiz the user has finished.
+    - (Read/Get) Get user's rank.
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
