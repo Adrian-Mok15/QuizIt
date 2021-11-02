@@ -121,11 +121,13 @@ ParseQuery<Quiz> query = ParseQuery.getQuery<Quiz.class);
 query.findInBackground(new FindCallback<Post>(){
      @Override
      if(e != null){
-          Log.e(TAG, "issue with getting quizzesw", e);
+          Log.e(TAG, "issue with getting quizzes", e);
           return;
           }
      }
-     for(Quiz quiz : quizzes){}
+     for(Quiz quiz : quizzes){
+          Log.i(TAG, "Quiz: " + quiz.getName());
+     }
      adapter.clear()
      adapter.addAll(quizzes);
      allPosts.addAll(quizzes);
