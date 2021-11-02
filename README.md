@@ -116,23 +116,23 @@ A quiz app that asks you multiple-choice questions related to computer science i
 
 ### Networking
 - Home Feed Screen
+   -(Read/Get)Query all quizzes that the user hasn't finished.
 ```
-ParseQuery<Quiz> query = ParseQuery.getQuery<Quiz.class);
-query.findInBackground(new FindCallback<Post>(){
-     @Override
-     if(e != null){
-          Log.e(TAG, "issue with getting quizzes", e);
-          return;
+     ParseQuery<Quiz> query = ParseQuery.getQuery<Quiz.class);
+     query.findInBackground(new FindCallback<Post>(){
+          @Override
+          if(e != null){
+               Log.e(TAG, "issue with getting quizzes", e);
+               return;
           }
-     }
-     for(Quiz quiz : quizzes){
-          Log.i(TAG, "Quiz: " + quiz.getName());
-     }
-     adapter.clear()
-     adapter.addAll(quizzes);
-     allPosts.addAll(quizzes);
-     swipeRefreshLayout.setRefreshing(false);
-}
+          for(Quiz quiz : quizzes){
+               Log.i(TAG, "Quiz: " + quiz.getName());
+          }
+          adapter.clear()
+          adapter.addAll(quizzes);
+          allPosts.addAll(quizzes);
+          swipeRefreshLayout.setRefreshing(false);
+       }
 ```
 - [https://github.com/realVEct0r/leetcode-api]
 - [Create basic snippets for each Parse network request]
