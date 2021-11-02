@@ -120,21 +120,21 @@ A quiz app that asks you multiple-choice questions related to computer science i
          ```
          ParseQuery<Quiz> query = ParseQuery.getQuery(Quiz.class);
          query.findInBackground(new FindCallback<Post>() {
-            @Override
-            if (e != null){
-                    Log.e(TAG, "issue with getting quizzes", e);
-                    return;
+         @Override
+         if (e != null){
+          Log.e(TAG, "issue with getting quizzes", e);
+          return;
                 }
-            } 
-            for(Quiz quiz : quizzes){
-                    Log.i(TAG, "Post " + post.getDescription() + ", username: " + post.getUser().getUsername());
-                }
-           // TODO: Do something with posts...
-           adapter.clear();
-           adapter.addAll(posts);
-           allPosts.addAll(posts);
-           swipeRefreshLayout.setRefreshing(false);
-            }
+         }
+         for(Quiz quiz : quizzes){
+          Log.i(TAG, "Post " + post.getDescription() + ", username: " + post.getUser().getUsername());
+         }
+         // TODO: Do something with posts...
+         adapter.clear();
+         adapter.addAll(posts);
+         allPosts.addAll(posts);
+         swipeRefreshLayout.setRefreshing(false);
+          }
          }
          ```
 - [https://github.com/realVEct0r/leetcode-api]
