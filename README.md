@@ -117,7 +117,7 @@ A quiz app that asks you multiple-choice questions related to computer science i
 ### Networking
 - Home Feed Screen
   - (Read/GET) Query all quizzes where user hasn't started
-         ```swift
+         ```
          let query = PFQuery(className:"Quiz")
          query.whereKey("author", equalTo: currentUser)
          query.findObjectsInBackground { (Quiz: [PFObject]?, error: Error?) in
