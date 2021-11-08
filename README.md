@@ -30,13 +30,13 @@ A quiz app that asks you multiple-choice questions related to computer science i
 **Required Must-have Stories**
 
 
-* Login/sign up page
-* Logout button
-* Bottom navigation view - home page with the different quiz types, should hold point values to make the game fun (probably at the top right), profile page with settings, 
-* Database for the questions. Either need to get an API, or write the questions ourselves.
-* QuizActivity.xml - Should have a question at the top, and 4 buttons representing each multiple choice. Should probably also have an exit button. Point counter gained per quiz. We could probably follow the same pt system as some online quiz thing. 
-* Home.xml - buttons to represent the different quiz types. Username at the top left. Points at the top right. 
-* Profile.xml - profile page with stats of how many they got right/wrong. If we decide to categorize the questions, that should be shown here as well. Logout button. 
+- [x] Login/sign up page
+- [x] Logout button
+- [ ] Bottom navigation view - home page with the different quiz types, should hold point values to make the game fun (probably at the top right), profile page with settings, 
+- [ ] Database for the questions. Either need to get an API, or write the questions ourselves.
+- [ ] QuizActivity.xml - Should have a question at the top, and 4 buttons representing each multiple choice. Should probably also have an exit button. Point counter gained per quiz. We could probably follow the same pt system as some online quiz thing. 
+- [ ] Home.xml - buttons to represent the different quiz types. Username at the top left. Points at the top right. 
+- [ ] Profile.xml - profile page with stats of how many they got right/wrong. If we decide to categorize the questions, that should be shown here as well. Logout button. 
 
 **Optional Nice-to-have Stories**
 
@@ -168,3 +168,8 @@ A quiz app that asks you multiple-choice questions related to computer science i
      - (Read/Get) Number of questions the user got right.
      - (Read/Get) Number of questions the user got wrong.
 - [https://github.com/realVEct0r/leetcode-api]
+
+## Progress
+
+### Milestone 1
+<img src='firstmilestone.gif' alt='first milestone'>
