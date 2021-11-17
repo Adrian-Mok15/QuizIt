@@ -1,10 +1,10 @@
 package com.example.quizit;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -42,15 +42,26 @@ public class QuizAdapter extends RecyclerView.Adapter<QuizAdapter.ViewHolder> {
 
     class ViewHolder extends RecyclerView.ViewHolder{
 
-        private TextView tvTopic;
+        private TextView tvName;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            tvTopic = itemView.findViewById(R.id.tvTopic);
+            tvName = itemView.findViewById(R.id.tvName);
         }
 
         public void bind(Quiz quiz) {
-            tvTopic.setText(quiz.getKeyTopic());
+            tvName.setText(quiz.getKeyTopic());
+//            container.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    //2. Navigate to a new activity
+//                    Intent i = new Intent(context, QuizAdapter.class);
+//                    i.putExtra("movie", Parcels.wrap(quiz));
+//
+//                    context.startActivity(i);
+////                    Toast.makeText(context, movie.getTitle(),Toast.LENGTH_SHORT).show();
+//                }
+//            });
         }
         // Clean all elements of the recycler
         public void clear(){

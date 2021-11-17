@@ -11,12 +11,17 @@ public class Quiz extends ParseObject {
 
     public static final String KEY_TOPIC = "topic";
     public static final String KEY_ID = "objectId";
+    public static final String KEY_NAME = "name";
+
+//    public  String getKeyName() {
+//        return getString(KEY_NAME);
+//    }
 
     public String getKeyTopic() {
         return getString(KEY_TOPIC);
     }
 
     public String getKeyId() {
-        return getString(KEY_ID);
+        return getObjectId();
     }
 }

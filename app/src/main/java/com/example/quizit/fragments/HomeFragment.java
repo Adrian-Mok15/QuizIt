@@ -14,7 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.quizit.LoginActivity;
+//import com.example.quizit.LoginActivity;
 import com.example.quizit.Quiz;
 import com.example.quizit.QuizAdapter;
 import com.example.quizit.R;
@@ -100,8 +100,10 @@ import java.util.List;
 
         protected void queryQuizzes() {
             ParseQuery<Quiz> query = ParseQuery.getQuery(Quiz.class);
-            query.include(Quiz.KEY_ID);
-            query.setLimit(20);
+//            ParseQuery<Quiz> query = new ParseQuery("Quiz");
+//            query.include(Quiz.KEY_TOPIC);
+//            query.whereEqualTo(Quiz.KEY_TOPIC, "Data Abstraction");
+//            query.setLimit(20);
             query.findInBackground(new FindCallback<Quiz>() {
                 @Override
                 public void done(List<Quiz> Quizzes, ParseException e) {
