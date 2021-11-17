@@ -3,11 +3,14 @@ package com.example.quizit;
 import android.app.Application;
 
 import com.parse.Parse;
+import com.parse.ParseObject;
 
 public class ParseApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+
+        ParseObject.registerSubclass(Quiz.class);
 
         Parse.initialize(new Parse.Configuration.Builder(this)
                 .applicationId("X3LhHvoicAnCegpK6CSOV2GmKmmkzSLfZK05sZyA")
