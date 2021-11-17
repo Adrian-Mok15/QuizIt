@@ -174,3 +174,6 @@ A quiz app that asks you multiple-choice questions related to computer science i
 
 ### Milestone 1
 <img src='firstmilestone.gif' alt='first milestone'>
+
+### Milestone 2
+<img src='secondmilestone.gif' alt='second milestone'>
