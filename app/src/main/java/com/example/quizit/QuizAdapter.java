@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -50,18 +51,18 @@ public class QuizAdapter extends RecyclerView.Adapter<QuizAdapter.ViewHolder> {
         }
 
         public void bind(Quiz quiz) {
-            tvName.setText(quiz.getKeyTopic());
-//            container.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    //2. Navigate to a new activity
-//                    Intent i = new Intent(context, QuizAdapter.class);
-//                    i.putExtra("movie", Parcels.wrap(quiz));
-//
-//                    context.startActivity(i);
-////                    Toast.makeText(context, movie.getTitle(),Toast.LENGTH_SHORT).show();
-//                }
-//            });
+            tvName.setText(quiz.getKeyTopic() + " - " + quiz.getKeyName());
+            tvName.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+//                    Toast.makeText(context, quiz.getKeyName(),Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(context, DetailActivity.class);
+                    i.putExtra("topic", quiz.getKeyTopic());
+                    i.putExtra("name", quiz.getKeyName());
+                    i.putExtra("id", quiz.getKeyId());
+                    context.startActivity(i);
+                }
+            });
         }
         // Clean all elements of the recycler
         public void clear(){

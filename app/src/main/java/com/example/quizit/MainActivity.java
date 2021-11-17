@@ -38,16 +38,16 @@ public class MainActivity extends AppCompatActivity {
                 Fragment fragment;
                 switch (menuItem.getItemId()) {
                     case R.id.action_home:
-                        Toast.makeText(MainActivity.this, "Home!", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(MainActivity.this, "Home!", Toast.LENGTH_SHORT).show();
                         fragment = new HomeFragment();
                         break;
                     case R.id.action_profile:
-                        Toast.makeText(MainActivity.this, "Profile!", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(MainActivity.this, "Profile!", Toast.LENGTH_SHORT).show();
                         fragment = new ProfileFragment();
                         break;
                     case R.id.action_history:
                     default:
-                        Toast.makeText(MainActivity.this, "Previous Quizzes!", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(MainActivity.this, "Previous Quizzes!", Toast.LENGTH_SHORT).show();
                         fragment = new HistoryFragment();
                         break;
                 }
