@@ -12,9 +12,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.quizit.LoginActivity;
 import com.example.quizit.R;
+import com.parse.ParseFile;
 import com.parse.ParseUser;
 
 /**
@@ -24,7 +28,6 @@ public class ProfileFragment extends Fragment {
 
     private Button btnLogout;
     private ImageView image;
-    private Button btnLogout;
     private TextView username;
     private TextView rank;
     private TextView FavoriteTopic;
@@ -56,6 +59,9 @@ public class ProfileFragment extends Fragment {
         ParseFile ProImage = currentUser.getParseFile("Profile_picture");;
         if(ProImage != null ){
             Glide.with(getContext()).load(ProImage.getUrl()).into(image);
+        }
+        else {
+            Glide.with(getContext()).load(R.drawable.profile).into(image);
         }
         String Rank = currentUser.getString("rank");
         String UserName = currentUser.getString("username");
