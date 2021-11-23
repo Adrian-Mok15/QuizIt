@@ -23,6 +23,14 @@ import com.parse.ParseUser;
 public class ProfileFragment extends Fragment {
 
     private Button btnLogout;
+    private ImageView image;
+    private Button btnLogout;
+    private TextView username;
+    private TextView rank;
+    private TextView FavoriteTopic;
+    private TextView average;
+    private TextView leastFavorite;
+    private TextView average2;
     public static final String TAG = "ProfileFragment";
 
     public ProfileFragment() {
@@ -39,6 +47,21 @@ public class ProfileFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        //**************
+        username =  view.findViewById(R.id.txtUsername);
+        rank = view.findViewById(R.id.txtRank);
+        image = view.findViewById(R.id.ProfileImageView);
+
+        ParseUser currentUser = ParseUser.getCurrentUser();
+        ParseFile ProImage = currentUser.getParseFile("Profile_picture");;
+        if(ProImage != null ){
+            Glide.with(getContext()).load(ProImage.getUrl()).into(image);
+        }
+        String Rank = currentUser.getString("rank");
+        String UserName = currentUser.getString("username");
+        username.setText("Username: " + UserName);
+        rank.setText("Rank: " + Rank);
+        //**********
         btnLogout = view.findViewById(R.id.btnLogOut);
 
         btnLogout.setOnClickListener(new View.OnClickListener() {
