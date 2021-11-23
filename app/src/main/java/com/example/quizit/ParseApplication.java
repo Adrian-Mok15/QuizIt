@@ -11,6 +11,7 @@ public class ParseApplication extends Application {
         super.onCreate();
 
         ParseObject.registerSubclass(Quiz.class);
+        ParseObject.registerSubclass(Question.class);
 
         Parse.initialize(new Parse.Configuration.Builder(this)
                 .applicationId("X3LhHvoicAnCegpK6CSOV2GmKmmkzSLfZK05sZyA")
