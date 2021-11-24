@@ -27,6 +27,7 @@ import com.parse.ParseUser;
  */
 public class ProfileFragment extends Fragment {
 
+    private TextView LeaderBoard;
     private Button btnLogout;
     private Button btnSettings;
     private ImageView image;
@@ -52,11 +53,21 @@ public class ProfileFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        //**************
+        
         username =  view.findViewById(R.id.txtUsername);
         rank = view.findViewById(R.id.txtRank);
         image = view.findViewById(R.id.ProfileImageView);
+        LeaderBoard = view.findViewById(R.id.txtLeaderBoard);
         btnSettings = view.findViewById(R.id.btnSettings);
+        //New***
+        LeaderBoard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getContext(), Leaderboard2.class);
+                getContext().startActivity(i);
+            }
+        });
+        //****
 
         ParseUser currentUser = ParseUser.getCurrentUser();
         ParseFile ProImage = currentUser.getParseFile("Profile_picture");;
@@ -70,7 +81,7 @@ public class ProfileFragment extends Fragment {
         String UserName = currentUser.getString("username");
         username.setText("Username: " + UserName);
         rank.setText("Rank: " + Rank);
-        //**********
+        
         btnLogout = view.findViewById(R.id.btnLogOut);
 
         btnLogout.setOnClickListener(new View.OnClickListener() {
