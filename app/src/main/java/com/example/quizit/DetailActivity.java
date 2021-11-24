@@ -15,7 +15,6 @@ import com.parse.ParseQuery;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 public class DetailActivity extends AppCompatActivity {
 
@@ -28,8 +27,8 @@ public class DetailActivity extends AppCompatActivity {
     int position = 0;
     private ArrayList<String> user_answers = new ArrayList<>();
     private ArrayList<String> correct_answers = new ArrayList<>();
+    private ArrayList<String> questions = new ArrayList<>();
 
-    Random random;
     int currentScore = 0, questionAttempted = 1, currentPos;
 
 
@@ -46,7 +45,6 @@ public class DetailActivity extends AppCompatActivity {
         option4Btn = findViewById(R.id.idBtnOption4);
 
 //        questionArrayList = new ArrayList<>();
-        random = new Random();
 
 
         String topic = getIntent().getStringExtra("topic");
@@ -80,94 +78,97 @@ public class DetailActivity extends AppCompatActivity {
                             //this is where you would get the results for the results page.
                         }
                         user_answers.add(option1Btn.getText().toString());
+                        Log.i(TAG, "Answers: " + user_answers);
                         correct_answers.add(questionArrayList.get(position).getKeyAnswer());
+                        Log.i(TAG, "Correct: " + correct_answers);
+                        questions.add(questionArrayList.get(position).getKeyQuestion());
                         position++;
                         setTextsToScreen(position);
 
-//                        if(position > questionArrayList.size()){
-//                            Intent i = new Intent(DetailActivity.this, ResultsActivity.class); //for the results page
-//                            startActivity(i);
-//                        }
+                        if(position > questionArrayList.size() - 1){
+                            Intent i = new Intent(DetailActivity.this, ResultsActivity.class); //for the results page
+                            i.putExtra("questions", questions);
+                            i.putExtra("user_answers", user_answers);
+                            i.putExtra("correct_answers", correct_answers);
+                            i.putExtra("score", currentScore);
+                            startActivity(i);
+                        }
                     }
                 });
 
                 option2Btn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        if(questionArrayList.get(position).getKeyAnswer().toString().trim().toLowerCase().equals(option1Btn.getText().toString().trim().toLowerCase())){
+                        if(questionArrayList.get(position).getKeyAnswer().toString().trim().toLowerCase().equals(option2Btn.getText().toString().trim().toLowerCase())){
                             currentScore++;
                             //this is where you would get the results for the results page.
                         }
-                        user_answers.add(option1Btn.getText().toString());
+                        user_answers.add(option2Btn.getText().toString());
                         correct_answers.add(questionArrayList.get(position).getKeyAnswer());
+                        questions.add(questionArrayList.get(position).getKeyQuestion());
                         position++;
                         setTextsToScreen(position);
 
-//                        if(position > questionArrayList.size()){
-//                            Intent i = new Intent(DetailActivity.this, ResultsActivity.class); //for the results page
-//                            startActivity(i);
-//                        }
+                        if(position > questionArrayList.size() - 1){
+                            Intent i = new Intent(DetailActivity.this, ResultsActivity.class); //for the results page
+                            i.putExtra("questions", questions);
+                            i.putExtra("user_answers", user_answers);
+                            i.putExtra("correct_answers", correct_answers);
+                            i.putExtra("score", currentScore);
+                            startActivity(i);
+                        }
                     }
                 });
 
                 option3Btn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        if(questionArrayList.get(position).getKeyAnswer().toString().trim().toLowerCase().equals(option1Btn.getText().toString().trim().toLowerCase())){
+                        if(questionArrayList.get(position).getKeyAnswer().toString().trim().toLowerCase().equals(option3Btn.getText().toString().trim().toLowerCase())){
                             currentScore++;
                             //this is where you would get the results for the results page.
                         }
-                        user_answers.add(option1Btn.getText().toString());
+                        user_answers.add(option3Btn.getText().toString());
                         correct_answers.add(questionArrayList.get(position).getKeyAnswer());
+                        questions.add(questionArrayList.get(position).getKeyQuestion());
                         position++;
                         setTextsToScreen(position);
 
-//                        if(position > questionArrayList.size()){
-//                            Intent i = new Intent(DetailActivity.this, ResultsActivity.class); //for the results page
-//                            startActivity(i);
-//                        }
+                        if(position > questionArrayList.size() - 1){
+                            Intent i = new Intent(DetailActivity.this, ResultsActivity.class); //for the results page
+                            i.putExtra("questions", questions);
+                            i.putExtra("user_answers", user_answers);
+                            i.putExtra("correct_answers", correct_answers);
+                            i.putExtra("score", currentScore);
+                            startActivity(i);
+                        }
                     }
                 });
 
                 option4Btn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        if(questionArrayList.get(position).getKeyAnswer().toString().trim().toLowerCase().equals(option1Btn.getText().toString().trim().toLowerCase())){
+                        if(questionArrayList.get(position).getKeyAnswer().toString().trim().toLowerCase().equals(option4Btn.getText().toString().trim().toLowerCase())){
                             currentScore++;
                             //this is where you would get the results for the results page.
                         }
-                        user_answers.add(option1Btn.getText().toString());
+                        user_answers.add(option4Btn.getText().toString());
                         correct_answers.add(questionArrayList.get(position).getKeyAnswer());
+                        questions.add(questionArrayList.get(position).getKeyQuestion());
                         position++;
                         setTextsToScreen(position);
 
-
-//                        if(position > questionArrayList.size()){
-//                            Intent i = new Intent(DetailActivity.this, ResultsActivity.class); //for the results page
-//                            startActivity(i);
-//                        }
+                        if(position > questionArrayList.size() - 1){
+                            Intent i = new Intent(DetailActivity.this, ResultsActivity.class); //for the results page
+                            i.putExtra("questions", questions);
+                            i.putExtra("user_answers", user_answers);
+                            i.putExtra("correct_answers", correct_answers);
+                            i.putExtra("score", currentScore);
+                            startActivity(i);
+                        }
                     }
                 });
-
-
-
-
             }
         });
-
-
-
-        Log.i(TAG, "Size: " + questionArrayList.size());
-
-//        currentQuestion = questionArrayList.get(0);
-//
-//        if(questionArrayList.size() > position){
-//            currentQuestion = questionArrayList.get(position);
-//            position++;
-//        }
-//
-//
-
     }
 
     protected void setTextsToScreen(int position){
@@ -178,7 +179,7 @@ public class DetailActivity extends AppCompatActivity {
         }
 
         String topic = getIntent().getStringExtra("topic");
-        topic += getIntent().getStringExtra("name");
+        topic += " - " + getIntent().getStringExtra("name");
         String objId = getIntent().getStringExtra("id");
 
         String question = currentQuestion.getKeyQuestion();
@@ -195,30 +196,4 @@ public class DetailActivity extends AppCompatActivity {
         option3Btn.setText(option3);
         option4Btn.setText(option4);
     }
-
-//    protected void queryQuestions(String objId) {
-//        ParseQuery<Question> query = ParseQuery.getQuery(Question.class);
-//        query.whereEqualTo(Question.KEY_QUIZ_ID, objId);
-//        query.findInBackground(new FindCallback<Question>() {
-//            @Override
-//            public void done(List<Question> Questions, ParseException e) {
-//                if(e != null){
-//                    Log.e(TAG,"Issue with getting Questions", e);
-//                    return;
-//                }
-//                for(Question question: Questions){
-//                    Log.i(TAG, "Question: " + question.getKeyQuestion());
-//                }
-//                questionArrayList.addAll(Questions);
-//                setTextsToScreen();
-//
-//            }
-//        });
-//    }
-
-
-
-
-
-
 }

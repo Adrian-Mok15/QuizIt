@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultsActivity">
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvQuestionOne"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_marginStart="0dp"-->
+<!--        android:layout_marginTop="93dp"-->
+<!--        tools:text="Question: " />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvCorrectOne"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/tvSelectedOne"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_marginTop="1dp"-->
+<!--        tools:text="Correct Answer:" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvSelectedOne"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/tvQuestionOne"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_marginTop="1dp"-->
+<!--        tools:text="Selected Answer:" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvQuestionTwo"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/tvCorrectOne"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        tools:text="Question: " />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvCorrectTwo"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/tvSelectedTwo"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_marginStart="0dp"-->
+<!--        android:layout_marginTop="1dp"-->
+<!--        tools:text="Correct Answer:" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvSelectedTwo"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/tvQuestionTwo"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_marginTop="1dp"-->
+<!--        tools:text="Selected Answer:" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvQuestionThree"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/tvCorrectTwo"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        tools:text="Question: " />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvCorrectThree"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/tvSelectedThree"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_marginStart="0dp"-->
+<!--        android:layout_marginTop="1dp"-->
+<!--        tools:text="Correct Answer:" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvSelectedThree"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/tvQuestionThree"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_marginTop="1dp"-->
+<!--        tools:text="Selected Answer:" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvQuestionFour"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/tvCorrectThree"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        tools:text="Question: " />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvCorrectFour"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/tvSelectedFour"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_marginStart="0dp"-->
+<!--        android:layout_marginTop="1dp"-->
+<!--        tools:text="Correct Answer:" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvSelectedFour"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/tvQuestionFour"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_marginTop="1dp"-->
+<!--        tools:text="Selected Answer:" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvQuestionFive"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/tvCorrectFour"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        tools:text="Question: " />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvCorrectFive"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/tvSelectedFive"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_marginStart="0dp"-->
+<!--        android:layout_marginTop="1dp"-->
+<!--        tools:text="Correct Answer:" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvSelectedFive"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/tvQuestionFive"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_marginTop="1dp"-->
+<!--        tools:text="Selected Answer:" />-->
+
+    <TextView
+        android:id="@+id/tvResults"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:paddingBottom="10dp"
+        android:text="Results"
+        android:textColor="#000000"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/btnDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="13dp"
+        android:text="Done" />
+
+    <TextView
+        android:id="@+id/tvScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="57dp"
+        tools:text="Score: 8/10" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvResults"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnDone"
+        android:layout_below="@+id/tvScore"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp" />
+
+</RelativeLayout>

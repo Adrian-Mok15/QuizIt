@@ -18,6 +18,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.example.quizit.LoginActivity;
 import com.example.quizit.R;
+import com.example.quizit.SettingsActivity;
 import com.parse.ParseFile;
 import com.parse.ParseUser;
 
@@ -27,6 +28,7 @@ import com.parse.ParseUser;
 public class ProfileFragment extends Fragment {
 
     private Button btnLogout;
+    private Button btnSettings;
     private ImageView image;
     private TextView username;
     private TextView rank;
@@ -54,6 +56,7 @@ public class ProfileFragment extends Fragment {
         username =  view.findViewById(R.id.txtUsername);
         rank = view.findViewById(R.id.txtRank);
         image = view.findViewById(R.id.ProfileImageView);
+        btnSettings = view.findViewById(R.id.btnSettings);
 
         ParseUser currentUser = ParseUser.getCurrentUser();
         ParseFile ProImage = currentUser.getParseFile("Profile_picture");;
@@ -77,6 +80,14 @@ public class ProfileFragment extends Fragment {
                 ParseUser currentUser = ParseUser.getCurrentUser();
                 Log.i(TAG, "Log out successful. Current user is " + currentUser);
                 goLoginActivity();
+            }
+        });
+
+        btnSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getContext(), SettingsActivity.class);
+                startActivity(i);
             }
         });
 
