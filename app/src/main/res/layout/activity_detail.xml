@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".DetailActivity">
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:orientation="vertical">
 
     <TextView
-        android:id="@+id/topicView"
+
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="2dp"
-        android:clickable="false"
+        android:layout_height = "wrap_content"
+        android:text="Quiz"
+        android:textAllCaps="false"
+        android:textAlignment="center"
         android:gravity="center"
+        android:layout_marginTop="5dp"
         android:textSize="25sp"
+        android:textColor="@color/black"
+        android:id="@+id/topicView"
+        android:clickable="false"
         tools:text="Topic" />
 
     <TextView
@@ -33,4 +36,50 @@
         tools:text="Name" />
 
 
-</RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below = "@id/topicView"
+        ></LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:padding="5dp"
+        android:text="Option 1"
+        android:textAllCaps="false"
+        android:id="@+id/idBtnOption1"
+        android:background="@color/teal_200"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:padding="5dp"
+        android:text="Option 2"
+        android:textAllCaps="false"
+        android:id="@+id/idBtnOption2"
+        android:background="@color/teal_200"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:padding="5dp"
+        android:text="Option 3"
+        android:textAllCaps="false"
+        android:id="@+id/idBtnOption3"
+        android:background="@color/teal_200"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:padding="5dp"
+        android:text="Option 4"
+        android:textAllCaps="false"
+        android:id="@+id/idBtnOption4"
+        android:background="@color/teal_200"
+        />
+
+</LinearLayout>

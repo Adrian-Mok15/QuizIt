@@ -60,6 +60,7 @@ public class QuizAdapter extends RecyclerView.Adapter<QuizAdapter.ViewHolder> {
                     i.putExtra("topic", quiz.getKeyTopic());
                     i.putExtra("name", quiz.getKeyName());
                     i.putExtra("id", quiz.getKeyId());
+
                     context.startActivity(i);
                 }
             });

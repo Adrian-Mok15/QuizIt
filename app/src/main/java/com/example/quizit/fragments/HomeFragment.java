@@ -89,9 +89,4 @@ import java.util.List;
         }
     }
 
-//    private void goQuizActivity() {
-//        Intent i = new Intent(getContext(), LoginActivity.class); CHANGE LOGINACTIVITY.CLASS TO THE QUIZ PAGE
-//        startActivity(i);
-//        getActivity().finish();
-//    }
 
