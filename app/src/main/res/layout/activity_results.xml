@@ -174,6 +174,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="57dp"
+        android:textSize="20sp"
         tools:text="Score: 8/10" />
 
     <androidx.recyclerview.widget.RecyclerView

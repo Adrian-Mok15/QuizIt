@@ -41,4 +41,8 @@ public class Question extends ParseObject {
     public String getKeyAnswer(){
         return getString(KEY_ANSWER);
     }
+
+    public Quiz getKeyQuiz() {
+        return (Quiz) getParseObject("quiz");
+    }
 }

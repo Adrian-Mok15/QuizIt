@@ -8,10 +8,13 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseQuery;
+import com.parse.ParseUser;
+import com.parse.SaveCallback;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -86,6 +89,8 @@ public class DetailActivity extends AppCompatActivity {
                         setTextsToScreen(position);
 
                         if(position > questionArrayList.size() - 1){
+                            ParseUser currentUser = ParseUser.getCurrentUser();
+                            saveAttempt(questionArrayList.get(0).getKeyQuiz(), currentUser, currentScore);
                             Intent i = new Intent(DetailActivity.this, ResultsActivity.class); //for the results page
                             i.putExtra("questions", questions);
                             i.putExtra("user_answers", user_answers);
@@ -110,6 +115,8 @@ public class DetailActivity extends AppCompatActivity {
                         setTextsToScreen(position);
 
                         if(position > questionArrayList.size() - 1){
+                            ParseUser currentUser = ParseUser.getCurrentUser();
+                            saveAttempt(questionArrayList.get(0).getKeyQuiz(), currentUser, currentScore);
                             Intent i = new Intent(DetailActivity.this, ResultsActivity.class); //for the results page
                             i.putExtra("questions", questions);
                             i.putExtra("user_answers", user_answers);
@@ -135,6 +142,8 @@ public class DetailActivity extends AppCompatActivity {
 
                         if(position > questionArrayList.size() - 1){
                             Intent i = new Intent(DetailActivity.this, ResultsActivity.class); //for the results page
+                            ParseUser currentUser = ParseUser.getCurrentUser();
+                            saveAttempt(questionArrayList.get(0).getKeyQuiz(), currentUser, currentScore);
                             i.putExtra("questions", questions);
                             i.putExtra("user_answers", user_answers);
                             i.putExtra("correct_answers", correct_answers);
@@ -158,6 +167,8 @@ public class DetailActivity extends AppCompatActivity {
                         setTextsToScreen(position);
 
                         if(position > questionArrayList.size() - 1){
+                            ParseUser currentUser = ParseUser.getCurrentUser();
+                            saveAttempt(questionArrayList.get(0).getKeyQuiz(), currentUser, currentScore);
                             Intent i = new Intent(DetailActivity.this, ResultsActivity.class); //for the results page
                             i.putExtra("questions", questions);
                             i.putExtra("user_answers", user_answers);
@@ -196,4 +207,21 @@ public class DetailActivity extends AppCompatActivity {
         option3Btn.setText(option3);
         option4Btn.setText(option4);
     }
+
+    private void saveAttempt(Quiz quiz, ParseUser currentUser, int score) {
+        QuizAttempt quizAttempt = new QuizAttempt();
+        quizAttempt.setQuiz(quiz);
+        quizAttempt.setUser(currentUser);
+        quizAttempt.setScore(score);
+        quizAttempt.saveInBackground(new SaveCallback() {
+            @Override
+            public void done(ParseException e) {
+                if(e != null) {
+                    Log.i(TAG, "Error saving quizAttempt");
+                }
+                Log.i(TAG, "quizAttempt successfully saved");
+            }
+        });
+    }
+
 }
