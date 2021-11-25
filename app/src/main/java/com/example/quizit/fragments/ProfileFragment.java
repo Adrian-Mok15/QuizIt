@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.quizit.Leaderboard2;
 import com.example.quizit.LoginActivity;
 import com.example.quizit.R;
 import com.example.quizit.SettingsActivity;
@@ -64,7 +65,7 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getContext(), Leaderboard2.class);
-                getContext().startActivity(i);
+                startActivity(i);
             }
         });
         //****

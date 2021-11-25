@@ -17,6 +17,7 @@
         <activity android:name=".ResultsActivity" />
         <activity android:name=".DetailActivity" />
         <activity android:name=".RegisterActivity" />
+        <activity android:name=".Leaderboard2" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

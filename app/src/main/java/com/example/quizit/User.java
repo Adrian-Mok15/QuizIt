@@ -1,4 +1,4 @@
-package com.example.instagram;
+package com.example.quizit;
 
 import com.parse.ParseClassName;
 import com.parse.ParseFile;
