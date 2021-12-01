@@ -2,7 +2,16 @@ package com.example.quizit;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.parse.ParseException;
+import com.parse.ParseUser;
+import com.parse.SaveCallback;
 
 public class SettingsActivity extends AppCompatActivity {
     private Button submitUser;
@@ -15,7 +24,7 @@ public class SettingsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
-    ParseUser currentUser = ParseUser.getCurrentUser();
+        ParseUser currentUser = ParseUser.getCurrentUser();
         submitUser = findViewById(R.id.button_changeusr);
         editUser = findViewById(R.id.EditTxtChangeUser);
         editPassword = findViewById(R.id.EditTxtChangePassword);
@@ -24,7 +33,6 @@ public class SettingsActivity extends AppCompatActivity {
         //submitPassword.setOnClickListener(this);
         //button_erasedata.setOnClickListener(this);
         //button_contactus.setOnClickListener(this);
-
 
 
         submitPassword.setOnClickListener(new View.OnClickListener() {
@@ -63,6 +71,7 @@ public class SettingsActivity extends AppCompatActivity {
         });
 
     }
+}
 
     /*@Override
     public void onClick(View view) {
