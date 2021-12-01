@@ -62,7 +62,7 @@ public class HistoryFragment extends Fragment {
         query.include(QuizAttempt.KEY_QUIZ);
         query.whereEqualTo(QuizAttempt.KEY_USER, ParseUser.getCurrentUser());
         query.setLimit(20);
-        query.addDescendingOrder(QuizAttempt.KEY_SCORE);
+        query.addDescendingOrder(QuizAttempt.KEY_CREATED);
         query.findInBackground(new FindCallback<QuizAttempt>() {
             @Override
             public void done(List<QuizAttempt> attempts, ParseException e) {
