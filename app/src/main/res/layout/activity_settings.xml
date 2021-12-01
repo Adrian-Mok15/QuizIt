@@ -7,16 +7,108 @@
     android:layout_height="match_parent"
     tools:context=".SettingsActivity">
 
-    <TextView
-        android:id="@+id/textView"
+   <TextView
+        android:id="@+id/erase_data"
+        style="?android:attr/listSeparatorTextViewStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:clickable="false"
+        android:layout_marginStart="-2dp"
+        android:layout_marginTop="258dp"
         android:gravity="center"
-        android:text="Settings"
-        android:textSize="30sp" />
+        android:text="Erase Data"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="15dp" />
+
+    <TextView
+        style="?android:attr/listSeparatorTextViewStyle"
+        android:id="@+id/account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="85dp"
+        android:gravity="center"
+        android:text="Account"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="15dp" />
+
+
+    <TextView
+        android:id="@+id/submit_feedback"
+        style="?android:attr/listSeparatorTextViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-2dp"
+        android:layout_marginTop="368dp"
+        android:layout_marginEnd="0dp"
+        android:gravity="center"
+        android:text="Submit Feedback"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/EditTxtChangeUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/account"
+        android:layout_marginRight="4dp"
+        android:hint="Username" />
+
+    <Button
+        android:id="@+id/button_changeusr"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/account"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="2dp"
+        android:gravity="center"
+        android:text="Change username" />
+
+    <EditText
+        android:id="@+id/EditTxtChangePassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/EditTxtChangeUser"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="4dp"
+        android:hint="Password" />
+
+    <Button
+        android:id="@+id/button_changepsw"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_changeusr"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="1dp"
+        android:gravity="center"
+        android:text="Change password" />
+
+    <Button
+        android:id="@+id/button_erasedata"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/erase_data"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:text="Erase data" />
+
+    <Button
+        android:id="@+id/button_contactus"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/submit_feedback"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:gravity="center"
+        android:text="Contact us!" />
 
 </RelativeLayout>
