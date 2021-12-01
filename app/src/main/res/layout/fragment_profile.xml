@@ -6,133 +6,144 @@
     tools:context=".fragments.ProfileFragment">
 
 
-    <TextView
-        android:id="@+id/txtLeaderBoard"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/SwipeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="19dp"
-        android:layout_marginBottom="218dp"
-        android:clickable="true"
-        android:text="LeaderBoard"
-        android:textColor="@color/black"
-        android:textSize="30sp" />
+            <TextView
+                android:id="@+id/txtLeaderBoard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="19dp"
+                android:layout_marginBottom="218dp"
+                android:clickable="true"
+                android:text="LeaderBoard"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
 
-    <TextView
-        android:id="@+id/txtProfile"
-        android:layout_width="wrap_content"
-        android:layout_height="35dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="2dp"
-        android:clickable="false"
-        android:gravity="center"
-        android:text="Profile"
-        android:textColor="@color/black"
-        android:textSize="30sp" />
+            <TextView
+                android:id="@+id/txtProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:clickable="false"
+                android:gravity="center"
+                android:text="Profile"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
 
-    <TextView
-        android:textColor="@color/black"
-        android:id="@+id/txtUsername"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtProfile"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_toEndOf="@+id/ProfileImageView"
-        android:layout_toRightOf="@+id/txtProfile"
-        android:text="Username: "
-        android:textSize="14sp"
-        />
+            <TextView
+                android:id="@+id/txtUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtProfile"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/ProfileImageView"
+                android:layout_toRightOf="@+id/txtProfile"
+                android:text="Username: "
+                android:textColor="@color/black"
+                android:textSize="14sp" />
 
-    <TextView
-        android:id="@+id/txtRank"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtUsername"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="5dp"
-        android:layout_toRightOf="@id/ProfileImageView"
-        android:text="Rank: "
-        android:textColor="@color/black"
-        android:textSize="14sp" />
-
-
-    <Button
-        android:id="@+id/btnLogOut"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="450dp"
-        android:backgroundTint="#3897f0"
-        android:padding="12dp"
-        android:text="Logout" />
-
-    <Button
-        android:id="@+id/btnSettings"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_marginLeft="290dp"
-        android:layout_marginTop="450dp"
-        android:layout_marginEnd="20dp"
-        android:backgroundTint="#3897f0"
-        android:padding="12dp"
-        android:text="Settings" />
-
-    <ImageView
-        android:id="@+id/ProfileImageView"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="60dp"
-        android:adjustViewBounds="true"
-        tools:src="@tools:sample/avatars" />
-
-    <TextView
-        android:textColor="@color/black"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/ProfileImageView"
-        android:text="Favorite Topic: "
-        android:textSize="16sp"
-        android:id="@+id/txtFavTopic"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="20dp"/>
-    <TextView
-        android:textColor="@color/black"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Average Score: "
-        android:textSize="16sp"
-        android:layout_below="@+id/txtFavTopic"
-        android:id="@+id/txtAverageScore"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="20dp"/>
-    <TextView
-        android:textColor="@color/black"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Least Favorite Topic: "
-        android:id="@+id/txtLeastFavorite"
-        android:layout_below="@+id/txtAverageScore"
-        android:textSize="16sp"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="20dp"/>
-    <TextView
-        android:textColor="@color/black"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Average Score: "
-        android:layout_below="@+id/txtLeastFavorite"
-        android:textSize="16sp"
-        android:layout_marginTop="5dp"
-        android:id="@+id/txtAverageScore2"
-        android:layout_marginLeft="20dp"/>
+            <TextView
+                android:id="@+id/txtRank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtUsername"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/ProfileImageView"
+                android:text="Rank: "
+                android:textColor="@color/black"
+                android:textSize="14sp" />
 
 
+            <Button
+                android:id="@+id/btnLogOut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="450dp"
+                android:backgroundTint="#3897f0"
+                android:padding="12dp"
+                android:text="Logout" />
+
+            <Button
+                android:id="@+id/btnSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="290dp"
+                android:layout_marginTop="450dp"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="#3897f0"
+                android:padding="12dp"
+                android:text="Settings" />
+
+            <ImageView
+                android:id="@+id/ProfileImageView"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="60dp"
+                android:adjustViewBounds="true"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/txtFavTopic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ProfileImageView"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Favorite Topic: "
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtAverageScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtFavTopic"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:text="Average Score: "
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtLeastFavorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtAverageScore"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:text="Least Favorite Topic: "
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtAverageScore2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtLeastFavorite"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:text="Average Score: "
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </RelativeLayout>
