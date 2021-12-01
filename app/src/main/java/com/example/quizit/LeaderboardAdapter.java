@@ -58,7 +58,9 @@ public class LeaderboardAdapter extends RecyclerView.Adapter<LeaderboardAdapter.
         }
 
         public void bind(ParseUser user) {
-            txtScore.setText("Score: " + user.getDouble("Score"));
+           double score = user.getDouble("Score");
+            DecimalFormat numberFormat = new DecimalFormat("#.00");
+            txtScore.setText("Score: " + numberFormat.format(score));
             txtUsername.setText("Username: " +  user.getString("username"));
             ParseFile image = user.getParseFile("Profile_picture");
             if(image != null ){
