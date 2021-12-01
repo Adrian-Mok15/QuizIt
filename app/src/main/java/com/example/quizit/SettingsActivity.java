@@ -19,6 +19,8 @@ public class SettingsActivity extends AppCompatActivity {
     private EditText editUser;
     private EditText editPassword;
     private Button submitPassword;
+    private Button buttonContactUs;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +31,7 @@ public class SettingsActivity extends AppCompatActivity {
         editUser = findViewById(R.id.EditTxtChangeUser);
         editPassword = findViewById(R.id.EditTxtChangePassword);
         submitPassword = findViewById(R.id.button_changepsw);
-
+        buttonContactUs = findViewById(R.id.button_contactus);
         //submitPassword.setOnClickListener(this);
         //button_erasedata.setOnClickListener(this);
         //button_contactus.setOnClickListener(this);
@@ -70,6 +72,17 @@ public class SettingsActivity extends AppCompatActivity {
             }
         });
 
+        buttonContactUs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openDialog();
+            }
+        });
+
+    }
+    private void openDialog() {
+        ContactUs_Dialog contactusDialog = new ContactUs_Dialog();
+        contactusDialog.show(getSupportFragmentManager(), "Contact Us Dialog");
     }
 }
     /*@Override
