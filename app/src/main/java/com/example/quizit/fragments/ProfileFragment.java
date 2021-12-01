@@ -270,7 +270,7 @@ public class ProfileFragment extends Fragment {
                 result1 = counter1/times;
                 result2 = counter2/times2;
                 average.setText("Average: " + String.valueOf(result1));
-                average2.setText("Average: " + String.valueOf(counter2));
+                average2.setText("Average: " + String.valueOf(result2));
             }
         });
     }
