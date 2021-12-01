@@ -14,6 +14,7 @@ import com.bumptech.glide.Glide;
 import com.parse.ParseFile;
 import com.parse.ParseUser;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 public class LeaderboardAdapter extends RecyclerView.Adapter<LeaderboardAdapter.ViewHolder> {
