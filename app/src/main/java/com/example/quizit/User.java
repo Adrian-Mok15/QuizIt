@@ -10,7 +10,7 @@ public class User extends ParseObject {
     public static final String KEY_USERNAME = "username";
     public static final String KEY_RANK = "rank";
     public static final String KEY_USER  = "User";
-    public static final String KEY_SCORE ="score";
+    public static final String KEY_SCORE ="Score";
     public static final String KEY_PROFILE_PICTURE = "Profile_picture";
 
     public ParseFile getProfile_picture(){
