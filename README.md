@@ -34,11 +34,11 @@ A quiz app that asks you multiple-choice questions related to computer science i
 - [x] Logout button
 - [x] Bottom navigation view - home page with the different quiz types
 - [x] Profile page with button that takes you to settings page
-- [ ] Settings page with options to change username and password
+- [x] Settings page with options to change username and password
 - [x] Database for the questions. Either need to get an API, or write the questions ourselves.
 - [x] QuizActivity.xml - Should have a question at the top, and 4 buttons representing each multiple choice. Should probably also have an exit button. Point counter gained per quiz. We could probably follow the same pt system as some online quiz thing. 
 - [x] Home.xml - buttons to represent the different quiz types. Username at the top left. Points at the top right. 
-- [ ] Profile.xml - profile page with stats of how many they got right/wrong. If we decide to categorize the questions, that should be shown here as well. Logout button. 
+- [x] Profile.xml - profile page with stats of how many they got right/wrong. If we decide to categorize the questions, that should be shown here as well. Logout button. 
 
 **Optional Nice-to-have Stories**
 
